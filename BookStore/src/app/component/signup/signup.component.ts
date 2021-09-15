@@ -39,7 +39,13 @@ export class SignupComponent implements OnInit {
       password: this.registerForm.value.password,
       phoneNumber: this.registerForm.value.mobileNo,
     }
-   
+    this.service.signUpUser(data).subscribe((response:any) =>{ 
+      console.log(response);
+      this.snackBar.open("Registration successfull.....", " ", { duration: 2000 });
+    }, error => {
+      console.log("error in register", error);
+      this.snackBar.open("Registration fail.....", " ", { duration: 2000 });
+    });
   }
   // display form values on success
   //  alert('SUCCESS!! :-)\n\n' + JSON.stringify(this.registerForm.value, null, 4));
