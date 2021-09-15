@@ -10,18 +10,17 @@ export class LoginSignupComponent implements OnInit {
 
   signupShown:boolean = true;
 
-  constructor( private router:Router,
-    private acRoute:ActivatedRoute) { }
+  constructor( private router:Router) { }
 
   ngOnInit(): void {
   }
 
   showSignup(){
     this.signupShown = true;
-    this.router.navigate(['register'],{relativeTo:this.acRoute});
+    this.router.navigateByUrl('home/register');
   }
   showLogin(){
     this.signupShown = false;
-    this.router.navigate(['login'],{relativeTo:this.acRoute});
+    this.router.navigateByUrl('home/login');
   }
 }

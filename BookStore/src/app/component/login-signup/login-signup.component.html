@@ -1,6 +1,6 @@
 <div class="container">
 	<div class="logo" fxHide.xs>
-		<img src="../../assets/loginsinup.png">
+		<img alt="loginSignup" src="../../../assets/loginsignup.png">
 		<h2>Online Book Shopping</h2>
 	</div>
   
@@ -8,13 +8,13 @@
       <div class="login-signup-select">
         <div class="login-select" (click)=showLogin()>
           <div class="login-and-underline" >
-            <H1 [ngClass]="{'gray-color':signupShown===true}">LOGIN</H1>
+            <h1 [ngClass]="{'gray-color':signupShown===true}">LOGIN</h1>
             <div [ngClass]="{'underline':signupShown===false}"></div>
           </div>
         </div>
         <div class="signup-select" (click)=showSignup()>
           <div class="signup-underline" >
-            <H1  [ngClass]="{'gray-color':signupShown===false}">SIGNUP</H1>
+            <h1  [ngClass]="{'gray-color':signupShown===false}">SIGNUP</h1>
             <div [ngClass]="{'underline':signupShown===true}"></div>
           </div>
         </div>
