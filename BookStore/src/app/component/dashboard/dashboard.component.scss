@@ -53,6 +53,7 @@
 		justify-content: center;
 		align-items: center;
 		align-self: center;
+
 		.search { 
 			width: 490px;
            border-radius: 3px;
@@ -63,7 +64,9 @@
 	.cart-and-profile { 
 		display: flex;
 		align-items: center;
-		.profile { 
+		
+        
+        .profile { 
 			position: relative;
 			cursor: pointer;
 			display: flex;

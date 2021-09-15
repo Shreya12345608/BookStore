@@ -20,5 +20,9 @@ export class HttpService {
   SignUpUser(url: any, data: any) {
     return this.http.post(this.BaseUrl + url, data);
   }
-}
 
+  getallBook(url:any){
+    return this.http.get(this.BaseUrl + url);
+  }
+
+}

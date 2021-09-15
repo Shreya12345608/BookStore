@@ -17,13 +17,15 @@ import { LoginComponent } from './component/login/login.component';
 import { MatSnackBarModule } from '@angular/material/snack-bar';
 import { DashboardComponent } from './component/dashboard/dashboard.component';
 import { SignupComponent } from './component/signup/signup.component';
+import { GetAllBookComponent } from './component/get-all-book/get-all-book.component';
 @NgModule({
   declarations: [
     AppComponent,
     LoginSignupComponent,
     LoginComponent,
     DashboardComponent,
-    SignupComponent
+    SignupComponent,
+    GetAllBookComponent
   ],
   imports: [
     BrowserModule,
