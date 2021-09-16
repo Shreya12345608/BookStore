@@ -18,6 +18,10 @@ import { MatSnackBarModule } from '@angular/material/snack-bar';
 import { DashboardComponent } from './component/dashboard/dashboard.component';
 import { SignupComponent } from './component/signup/signup.component';
 import { GetAllBookComponent } from './component/get-all-book/get-all-book.component';
+import {ScrollingModule} from '@angular/cdk/scrolling';
+import { DialogBoxComponent } from './component/dialagBox/dialog-box/dialog-box.component';
+import {MatDialogModule} from '@angular/material/dialog';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -25,7 +29,8 @@ import { GetAllBookComponent } from './component/get-all-book/get-all-book.compo
     LoginComponent,
     DashboardComponent,
     SignupComponent,
-    GetAllBookComponent
+    GetAllBookComponent,
+    DialogBoxComponent
   ],
   imports: [
     BrowserModule,
@@ -39,7 +44,9 @@ import { GetAllBookComponent } from './component/get-all-book/get-all-book.compo
     MatInputModule,
     MatIconModule,
     MatButtonModule,
-    FlexLayoutModule
+    ScrollingModule,
+    FlexLayoutModule,
+    MatDialogModule
   ],
   providers: [],
   bootstrap: [AppComponent]

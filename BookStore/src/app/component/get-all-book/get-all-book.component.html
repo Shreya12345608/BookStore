@@ -1,5 +1,6 @@
 <div class="book-container">
-    <div class="books-menu" fxLayout="row wrap" fxLayoutAlign="space-between center"  >
+
+  <div class="books-menu" fxLayout="row wrap" fxLayoutAlign="space-between center"  >
       <div><span class="books">Books<span class="NBooks" *ngIf="BookQuanity != 0">&nbsp; 5 </span></span></div>
       <div class="sort">
           <mat-form-field appearance="outline" >
@@ -14,10 +15,10 @@
     </div>
     <div class="all-books-container">
       <div class="all-books" *ngFor="let Book of booksArray">
-        <!-- (click)="showDescription(Book['bookId'])" -->
-        <div class="book">
+        <!--  -->
+        <div class="book " (click)="openDialog(Book)">
           <div class="book-image">
-            <img src={{Book.bookImage}} alt="">
+            <img height="150px" width="150px"  src={{Book.bookImage}} alt="">
           </div>
           <div class="book-description">
             <h2>{{Book.bookName}}</h2>
@@ -42,6 +43,5 @@
         </div>
       </div>
     </div>
-    
-    
+
   </div>

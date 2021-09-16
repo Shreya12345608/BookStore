@@ -22,7 +22,7 @@
         </div>
         <div class="profileInfo" *ngIf=profileDialogShown>
           <h4>Welcome</h4>
-          <div *ngIf="!userSignedOff">
+          <div *ngIf="userSignedOff">
             <p></p>
             <button mat-stroked-button color="accent" (click)="SignOut()">Sign Out</button>
           </div>
