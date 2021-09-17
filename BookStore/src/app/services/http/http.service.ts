@@ -25,4 +25,25 @@ export class HttpService {
     return this.http.get(this.BaseUrl + url);
   }
 
+  getCarts(url:any){
+    let token = localStorage.getItem('Token');
+    let options = {
+      headers: new HttpHeaders({
+        'Authorization': "Bearer " + token,
+        'Content-Type': 'application/json'
+      })
+    }
+    return this.http.get(this.BaseUrl + url, options);
+  }
+ 
+  addToCart(url: any, data: any) {
+    let token = localStorage.getItem('Token');
+    let options = {
+      headers: new HttpHeaders({
+        'Authorization': "Bearer " + token,
+        'Content-Type': 'application/json'
+      })
+    }
+    return this.http.post(this.BaseUrl + url, data, options);
+  }
 }

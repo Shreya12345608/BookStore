@@ -15,6 +15,8 @@ export class DashboardComponent implements OnInit {
 
   ngOnInit(): void {
   }
+ 
+    
   profileDialogShownToggle(){
     this.profileDialogShown = ! this.profileDialogShown;
   }
@@ -28,4 +30,5 @@ export class DashboardComponent implements OnInit {
   showCart(){
     this.route.navigate(['dashboard/cart']);
   }
+  
 }

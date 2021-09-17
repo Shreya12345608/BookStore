@@ -5,7 +5,7 @@ import {  MatInputModule } from '@angular/material/input';
 import {MatIconModule} from '@angular/material/icon';
 import {MatButtonModule} from '@angular/material/button';
 import { FlexLayoutModule } from '@angular/flex-layout';
-
+import { AuthguradService } from './authgurad.service';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
@@ -21,6 +21,7 @@ import { GetAllBookComponent } from './component/get-all-book/get-all-book.compo
 import {ScrollingModule} from '@angular/cdk/scrolling';
 import { DialogBoxComponent } from './component/dialagBox/dialog-box/dialog-box.component';
 import {MatDialogModule} from '@angular/material/dialog';
+import { CartComponent } from './component/cart/cart.component';
 
 @NgModule({
   declarations: [
@@ -30,7 +31,8 @@ import {MatDialogModule} from '@angular/material/dialog';
     DashboardComponent,
     SignupComponent,
     GetAllBookComponent,
-    DialogBoxComponent
+    DialogBoxComponent,
+    CartComponent
   ],
   imports: [
     BrowserModule,
@@ -48,7 +50,10 @@ import {MatDialogModule} from '@angular/material/dialog';
     FlexLayoutModule,
     MatDialogModule
   ],
-  providers: [],
+  providers: [
+
+    AuthguradService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
